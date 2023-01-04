@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Positive</title>
+    <style type="text/css">
+      body {
+        margin: 0;
+      }
+      .bg-css {
+        background: url("https://upload.wikimedia.org/wikipedia/commons/0/00/Fela_Akinse.jpg");
+
+        background-repeat: repeat;
+        height: 1500px;
+        background-size: cover;
+        opacity: 50%;
+      }
+      /* top nav */
+      .top-nav {
+        position: fixed;
+        top: 0px;
+        width: 100vw;
+        background-color: cornflowerblue;
+      }
+      .top-nav ul {
+        list-style: none;
+      }
+      .top-nav ul li {
+        float: left;
+        margin: 3px 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="top-nav">
+        <ul>
+          <li>CSS Home</li>
+          <li>Main Home</li>
+        </ul>
+      </div>
+    </nav>
+    <h1 style="margin-top: 100px">Position in CSS</h1>
+    <h2>Static</h2>
+    <p>
+      Static is the default HTML position and is presented as normal part of
+      flow. This doesn't allow for the use of the CSS position properties: top,
+      bottom, left, right.
+    </p>
+
+    <p>
+      The below CSS position values have access to the above listed properties
+    </p>
+    <h2>Fixed</h2>
+    <p>
+      Calculated according to absolute model. Allows tag to be moved out of
+      normal flow. Positioned according to browser window.
+      <strong>Does not scroll down with the content</strong>
+    </p>
+    <p>
+      We will use this to place a div from below in the bottom right corner.
+    </p>
+    <div style="position: fixed; top: 0; right: 0">
+      <h3>Fixed Tag</h3>
+    </div>
+    <h2>Relative</h2>
+    <p>
+      Box's position is calculated according to the normal flow (this is called
+      the position in normal flow). Then the box position is offset relative to
+      its normal position.
+    </p>
+    <div style="position: relative; top: 10px">
+      <h3>Relative Text</h3>
+    </div>
+    <h2>Absolute</h2>
+    <p>
+      Box's position is removed out of normal flow. Then the box position is
+      offset relative to the containing block. The absolute tag MUST be within a
+      relative tag in order to work properly. This allows the absoute tag to be
+      locked within the containing div.
+    </p>
+    <!-- container MUST be relative -->
+    <div style="position: relative">
+      <div style="position: absolute; right: 0px">
+        <h3>Absolute Text</h3>
+      </div>
+    </div>
+    <h2>Sticky</h2>
+    <p>
+      The sticky position can be used to position a tag within its containing
+      div. The div will then scroll down with user maintaining the position
+      <strong>UNTIL</strong> reaching the end of the containing div. Behaves
+      like a fixed element within the div.
+    </p>
+    <div class="bg-css">
+      <div style="position: sticky; top: 0px">
+        <h3>Sticky Text</h3>
+      </div>
+    </div>
+  </body>
+</html>

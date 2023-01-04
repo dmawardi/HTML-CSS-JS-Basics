@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables</title>
+
+    <!-- Internal Style tag -->
+    <style>
+      table,
+      td,
+      th {
+        border: 1px solid;
+      }
+      td,
+      th {
+        padding: 8px 8px 8px 8px;
+      }
+      /* Complex selectors
+      nth child selects a child number of any parent. This will select any td that is a 1st child
+      */
+      td:nth-child(1) {
+        width: 60%;
+      }
+      /* Selects all even child table rows */
+      tr:nth-child(even) {
+        background-color: orange;
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tables</h1>
+    <table>
+      <!-- Table headers are optional -->
+      <thead>
+        <tr>
+          <th>Artist</th>
+          <th>Album</th>
+          <th>Review</th>
+        </tr>
+      </thead>
+      <!-- Table body -->
+      <tbody>
+        <tr>
+          <td>Kanye West</td>
+          <td>Graduation</td>
+          <td rowspan="2">5 stars</td>
+        </tr>
+        <tr>
+          <td>Kanye West</td>
+          <td>Population</td>
+        </tr>
+        <tr>
+          <td>Oasis</td>
+          <td>Wonderwall</td>
+          <td>4.5 stars</td>
+        </tr>
+        <tr>
+          <td>Kingston</td>
+          <td>Sean Kingston</td>
+          <td>4 stars</td>
+        </tr>
+      </tbody>
+      <!-- table footer (auto added to bottom) -->
+      <tfoot>
+        <td colspan="3">All rights reserved</td>
+      </tfoot>
+    </table>
+  </body>
+</html>

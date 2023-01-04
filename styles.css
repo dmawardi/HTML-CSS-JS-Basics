@@ -1,0 +1,32 @@
+.bg-cover {
+  background: url("https://upload.wikimedia.org/wikipedia/commons/d/d0/Lundy_sheep_%28head_detail%29.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width: 600px;
+}
+
+.resource-list {
+  /* Removes default bullet points */
+  list-style: none;
+  overflow: hidden;
+  /* Removes default link underline */
+  text-decoration: none;
+}
+
+nav {
+  color: greenyellow;
+}
+
+/* Example of a nav menu */
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  display: inline;
+  padding: 20px 40px;
+  background-color: coral;
+}
+nav ul li:hover {
+  background-color: greenyellow;
+}

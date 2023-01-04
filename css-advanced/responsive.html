@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive CSS</title>
+    <style>
+      [class*="col-"] {
+        width: 100%;
+      }
+
+      header {
+        background-color: lightblue;
+      }
+
+      @media only screen and (min-width: 768px) {
+        header {
+          background-color: lightgreen;
+        }
+        .col-1 {
+          width: 100%;
+        }
+        .col-2 {
+          width: 50%;
+        }
+        .col-3 {
+          width: 33%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>Responsive CSS</h1>
+    </header>
+    <h2>Basic Flexbox</h2>
+    <p>
+      Below we will go over the basics of flexbox. Please advise that there are
+      more features in flexbox but we will primarily focus on the ones that can
+      get you started quickest.
+    </p>
+    <h3>Flex grow</h3>
+    <div style="border: 2px solid black; display: flex; flex-direction: row">
+      <div style="flex-grow: 1; background-color: lightgreen">Apples</div>
+      <div style="flex-grow: 2; background-color: brown">Bears</div>
+      <div style="flex-grow: 1; background-color: gold">Honey</div>
+    </div>
+    <h3>Flex Positioning</h3>
+    <!-- Try justifying content: flex-start, flex-end, center, space-between, space-around, space-evenly -->
+    <!-- Try align-items: flex-start, flex-end, center, stretch, baseline -->
+    <div
+      style="
+        height: 200px;
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+      "
+    >
+      <div style="background-color: lightgreen">Text</div>
+      <div style="background-color: lightblue">Text</div>
+      <div style="background-color: lightcoral">Text</div>
+    </div>
+    <br />
+    <h2>Flexwrap with columns</h2>
+    <!-- Flex Container -->
+    <div style="width: 100%; height: 300px; display: flex; flex-wrap: wrap">
+      <!-- Col 1 -->
+      <div
+        style="background-color: lightskyblue; height: 100%; text-align: center"
+        class="col-3"
+      >
+        Column 1
+      </div>
+      <!-- Col 2 -->
+      <div
+        style="background-color: lightgreen; height: 100%; text-align: center"
+        class="col-3"
+      >
+        Column 2
+      </div>
+      <!-- Col 3 -->
+      <div
+        style="background-color: lightcoral; height: 100%; text-align: center"
+        class="col-3"
+      >
+        Column 3
+      </div>
+    </div>
+  </body>
+</html>

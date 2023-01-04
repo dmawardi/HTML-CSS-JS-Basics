@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tutorial</title>
+    <style type="text/css">
+      body {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        background-color: azure;
+      }
+
+      .text-css h1,
+      .text-css h3 {
+        color: orange;
+      }
+
+      h1 {
+        /* Relative size: 100vw = whole viewport */
+        font-size: 5vw;
+        background-color: #ff0;
+        max-width: 700px;
+      }
+
+      aside h2 {
+        color: blue;
+      }
+
+      aside p {
+        font-weight: bold;
+      }
+
+      .align-right {
+        text-align: right;
+        text-transform: uppercase;
+        /* relative to default font size (uses em. 1em = 16px) */
+        font-size: 2em;
+        /* fixed size (uses px) */
+        font-size: 18px;
+      }
+      .align-center {
+        text-align: center;
+      }
+
+      #text-alignment-header {
+        color: aqua;
+        color: rgb(125, 125, 125);
+        color: #ff0;
+      }
+
+      /* Complex selectors */
+      p:first-letter {
+        font-size: 3em;
+        color: blue;
+      }
+
+      /* inline vs block */
+      .inline {
+        display: inline;
+      }
+      .block {
+        display: block;
+      }
+
+      /* css image */
+      .bg-css {
+        background: url("https://upload.wikimedia.org/wikipedia/commons/0/00/Fela_Akinse.jpg");
+
+        background-attachment: fixed;
+        background-repeat: repeat;
+        background-position: right bottom;
+        height: 25vh;
+
+        /*
+        background-size: cover;
+        opacity: 50%;
+        */
+      }
+
+      /* Border */
+      .border-box {
+        height: 20vh;
+        width: 40vw;
+
+        /* combined format */
+        border: solid 5px;
+
+        /* border radius */
+        border-radius: 5px;
+
+        /* center div */
+        margin: 10px auto;
+
+        /* Separated format */
+        /*border-bottom-style: solid;
+        border-bottom-color: blueviolet;*/
+      }
+
+      /* image outer div */
+      .image-container {
+        /* percentage width and height is % of container
+        NOTE: container must be set in pixels */
+        width: 100%;
+      }
+
+      /* Complex selector: used for precision and is considered higher ranked */
+      /* italic classes in p tags */
+      p .italic {
+        font-style: italic;
+      }
+      /* p tags with the class italic */
+      p.italic {
+        font-style: italic;
+      }
+
+      /* Box Model */
+      .no-padding {
+        padding: 0;
+        /* other acceptable methods */
+        /* padding: top bottom left right or padding: y-axis x-axis */
+      }
+
+      .no-margin {
+        margin: 0;
+      }
+
+      /* Pseudo classes section */
+      .pseudo-container {
+        margin: 100px 0px;
+      }
+      .pseudo-container a {
+        font-size: larger;
+        text-align: center;
+      }
+
+      /* Pseudo classes: must be used in the order below: link, visited, hover, active */
+      /* Unvisited Link */
+      a:link {
+        color: brown;
+      }
+      /* Visited Link */
+      a:visited {
+        color: red;
+      }
+      /* Mouse over */
+      a:hover {
+        color: burlywood;
+      }
+      /* Visited Link */
+      a:active {
+        color: green;
+      }
+
+      /* Animation */
+      .animation-container {
+      }
+
+      .border-animation {
+        text-align: center;
+        width: 50%;
+        /* transition animation: (action to watch, time to animate, animation type) 
+        CSS animations behave as listeners on main tag (not pseudo class)
+        */
+        transition: margin-left 0.4s ease-out;
+      }
+
+      .border-animation:hover {
+        margin-left: 30px;
+      }
+
+      /* Overflow */
+      .overflow-hidden {
+        background-color: #ff0;
+        max-height: 80px;
+        overflow: hidden;
+        margin: 25px 0;
+      }
+
+      .overflow-scroll {
+        background-color: #ff0;
+        max-height: 80px;
+        overflow: scroll;
+        margin: 25px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Tutorial</h1>
+    <h3>Advanced topics</h3>
+    <p>
+      Position Fixed, relative, absolute
+      <a href="css-advanced/position.html">--></a>
+    </p>
+    <p>
+      Responsive CSS: Flexbox and Media Queries
+      <a href="css-advanced/responsive.html">--></a>
+    </p>
+    <div class="text-css">
+      <h2>Text manipulation</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam fuga
+        recusandae sed repellendus
+        <span class="italic">impedit culpa voluptatum doloremque!</span> Nostrum
+        ad molestias veritatis vitae veniam, excepturi impedit et, aspernatur
+        corrupti sunt porro?
+      </p>
+      <h2 id="text-alignment-header">Text alignment</h2>
+      <h3 class="align-right">Align Right</h3>
+      <h3 class="align-center">Align Center</h3>
+      <p class="align-right">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam,
+        tempora obcaecati illo quas praesentium molestias voluptate saepe. Illum
+        quas quisquam in, numquam aspernatur, esse necessitatibus reprehenderit
+        error, repudiandae temporibus provident!
+      </p>
+      <aside>
+        <h2>Woosa</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo,
+          tempora. Reiciendis soluta, atque, ad quasi excepturi nihil magni
+          earum praesentium fugiat laboriosam harum iure ab odio laborum ipsum
+          quidem nostrum.
+        </p>
+      </aside>
+    </div>
+    <br />
+    <h1>Display inline vs block</h1>
+    <p>
+      Display block takes up the whole view width, whereas inline provides only
+      enough space for the content. We can see this change when using
+      background-color on two different elements: one that is block and another
+      that is inline
+    </p>
+    <div class="inline" style="background-color: aquamarine">Inline</div>
+    <div class="block" style="background-color: aquamarine">Block</div>
+    <br />
+    <h1>Box Model</h1>
+    <!-- This section uses a lot of inline css -->
+    <div style="background-color: yellow; padding: 30px">
+      <h3 class="no-margin no-padding">Margin</h3>
+      <div
+        style="
+          background-color: purple;
+          margin: 30px;
+          padding: 30px;
+          border: solid 2px;
+        "
+      >
+        <h3 class="no-margin no-padding">Padding</h3>
+        <div
+          style="
+            background-color: blue;
+            margin: 30px;
+            padding: 30px;
+            border: solid 2px;
+          "
+        >
+          <h3 class="no-margin no-padding">Content</h3>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div>
+      <h1>Borders</h1>
+      <div class="border-box"></div>
+    </div>
+    <div class="image-container">
+      <h1>Background images</h1>
+      <div class="bg-css"></div>
+    </div>
+    <div class="pseudo-container">
+      <h1>Pseudo classes</h1>
+      <p>
+        A psuedo class can be added to a css identifier to create effects based
+        on events like mouse pointers. As well as whether or not it had been
+        clicked previously.
+      </p>
+      <!-- text align works on elements contained inside -->
+      <div style="text-align: center">
+        <a href="http://www.google.com">Pseudo Link</a>
+      </div>
+    </div>
+    <br />
+    <div class="animation-container">
+      <h1>Animation</h1>
+      <div class="border-animation">
+        <h2>Animation Bottom Border</h2>
+      </div>
+    </div>
+    <br />
+    <div>
+      <h1>Overflow: scroll vs hidden</h1>
+      <div>
+        <h2>Overflow window</h2>
+        <p>Text that overflows will be chopped.</p>
+        <div class="overflow-hidden">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, enim
+            non. Odit molestias dolorum quasi quidem similique officiis
+            dignissimos explicabo unde harum numquam quos voluptas nisi quo
+            blanditiis, eius quam.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, enim
+            non. Odit molestias dolorum quasi quidem similique officiis
+            dignissimos explicabo unde harum numquam quos voluptas nisi quo
+            blanditiis, eius quam.
+          </p>
+        </div>
+        <h2>Scroll window</h2>
+        <p>Text that overflows will automatically add a scrollable effect</p>
+        <div class="overflow-scroll">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, enim
+            non. Odit molestias dolorum quasi quidem similique officiis
+            dignissimos explicabo unde harum numquam quos voluptas nisi quo
+            blanditiis, eius quam.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, enim
+            non. Odit molestias dolorum quasi quidem similique officiis
+            dignissimos explicabo unde harum numquam quos voluptas nisi quo
+            blanditiis, eius quam.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Hiding tags/elements -->
+    <div>
+      <h1>Hiding tags</h1>
+      <h2>Display: None</h2>
+      <p>Hides the tag/element and removes from viewport completely.</p>
+      <div style="display: none">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+          inventore, provident minima hic consequatur consectetur? Nobis odio
+          dolor, mollitia quis vel quo deleniti soluta quidem atque, amet
+          laborum quaerat suscipit?
+        </p>
+      </div>
+
+      <h2>Visibility: hidden</h2>
+      <p>
+        Hides the tag/element but continues to take up the space it would have
+        taken
+      </p>
+      <div style="visibility: hidden">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+          inventore, provident minima hic consequatur consectetur? Nobis odio
+          dolor, mollitia quis vel quo deleniti soluta quidem atque, amet
+          laborum quaerat suscipit?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

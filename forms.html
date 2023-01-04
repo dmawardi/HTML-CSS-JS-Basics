@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <h1>Forms</h1>
+    <form action="" name="login" method="post">
+      Username:
+      <input type="text" name="username" size="30" />
+      Password:
+      <input type="password" name="password" size="30" />
+
+      <br />
+      <!-- Select box -->
+      Car Make:
+      <select name="Cars" id="cars">
+        <option value="volvo">Volvo</option>
+        <option value="wuling">Wuling</option>
+        <option value="timor">Timor</option>
+      </select>
+
+      <br />
+      Operating System:
+      <input type="radio" name="system" value="PC" />PC
+      <input type="radio" name="system" value="Mac" checked />Mac
+
+      <br />
+      Consoles Owned:
+      <input type="checkbox" name="console" value="XboxX" />Xbox Series
+      <input type="checkbox" name="console" value="Ps5" checked />PS5
+      <br />
+      Comments:
+      <br />
+      <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+
+      <!-- Submit button -->
+      <input type="submit" name="login" />
+    </form>
+  </body>
+</html>
