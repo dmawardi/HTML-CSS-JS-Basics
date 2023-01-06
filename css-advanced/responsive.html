@@ -11,9 +11,13 @@
       }
 
       header {
-        background-color: lightblue;
+        background-color: white;
       }
-
+      @media only screen and (min-width: 640px) {
+        header {
+          background-color: lightblue;
+        }
+      }
       @media only screen and (min-width: 768px) {
         header {
           background-color: lightgreen;
@@ -28,6 +32,21 @@
           width: 33%;
         }
       }
+      @media only screen and (min-width: 1024px) {
+        header {
+          background-color: lightcoral;
+        }
+      }
+      @media only screen and (min-width: 1280px) {
+        header {
+          background-color: lightsalmon;
+        }
+      }
+      @media only screen and (min-width: 1536px) {
+        header {
+          background-color: lightseagreen;
+        }
+      }
     </style>
   </head>
   <body>
@@ -35,6 +54,13 @@
     <header>
       <h1>Responsive CSS</h1>
     </header>
+    <h2>Media Queries</h2>
+    <p>
+      Media queries are CSS utilities that allow you to check the size of the
+      screen. This is helpful to apply different CSS classes based on the screen
+      size/device
+    </p>
+    <p>Used in tandem with flexbox, Response websites are achievable</p>
     <h2>Basic Flexbox</h2>
     <p>
       Below we will go over the basics of flexbox. Please advise that there are

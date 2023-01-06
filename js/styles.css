@@ -1,0 +1,40 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+main {
+  margin-top: 80px;
+}
+
+/* Navbar */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  border-bottom: solid;
+  width: 100vw;
+}
+
+.logo {
+  background-color: black;
+  color: white;
+  padding: 4px 19px;
+}
+
+.nav-bar ul li {
+  float: left;
+  margin: 2px 6px;
+  padding: 2px 4px;
+  border-radius: 6px;
+  border: 2px solid black;
+}
+
+.nav-bar ul li:hover {
+  background-color: aquamarine;
+}
+
+.nav-bar ul {
+  list-style: none;
+}
