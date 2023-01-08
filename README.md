@@ -7,4 +7,4 @@ The purpose was to educate friends through presentation.
 
 Start in the index.html file in the root folder.  
 -The CSS folder contains more advanced CSS topics
--The JS folder contains more
+-The JS folder contains Javascript topics
