@@ -42,6 +42,11 @@ function setDate() {
   dateDiv.innerText = new Date();
 }
 
+// Key press handler
 function handleKeyDown(event) {
   console.log("key downed:", event.key);
+}
+
+function handleInputChange(element) {
+  console.log("change in input detected:", element.value);
 }
