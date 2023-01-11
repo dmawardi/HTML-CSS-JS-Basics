@@ -44,6 +44,10 @@ const listOfObjects = [
   },
 ];
 
+// Operator examples
+const oldAge = 25;
+let newAge = oldAge + (3 / 2) * 3;
+
 // How to add an element to HTML using Javascript
 //
 // Target element on HTML page as containing element
@@ -52,7 +56,7 @@ const appendDiv = document.getElementById("append");
 // Create P element from scratch
 const p = document.createElement("p");
 // Customize p element
-p.innerHTML = "No types available";
+p.innerHTML = "Your Pokemon is: " + listOfObjects[0].name;
 
 // Append
 appendDiv.append(p);
