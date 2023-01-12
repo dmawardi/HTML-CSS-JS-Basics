@@ -14,8 +14,11 @@ const anotherAddFunction = (num1, num2) => {
 // Using functions within functions
 //
 function cookEggs() {
+  // Call external function
   crackOpenEggs();
   console.log("Eggs have been cooked!");
+  // Change color style of button
+  this.style.color = "red";
 }
 
 function crackOpenEggs() {
