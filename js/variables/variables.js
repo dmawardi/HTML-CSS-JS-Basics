@@ -28,6 +28,11 @@ const pokemon = {
 // Lists
 // lists are able to hold lists of the above variables.
 const listOfWords = ["grandma", "grandpa", "father", "mother"];
+// Extra: sort is able to sort by alphabetical order
+listOfWords.sort();
+// Adding data to array
+listOfWords.push("Cheese");
+// More examples
 const listOfNumbers = [2, 4, 6, 8, 10];
 const listOfObjects = [
   {
@@ -60,3 +65,19 @@ p.innerHTML = "Your Pokemon is: " + listOfObjects[0].name;
 
 // Append
 appendDiv.append(p);
+
+// Global vs local
+// Declare global variable
+const tomato = "green tomato";
+
+// Build function
+function appleMaker() {
+  // Declare local variable
+  let apple = "green apple";
+
+  // Access global variable
+  console.log(tomato);
+}
+
+// Access function local variable
+console.log(apple);
