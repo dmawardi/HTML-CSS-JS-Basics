@@ -36,7 +36,7 @@ function sendConsoleMessage(message) {
 // Grabs currentDate div and sets to current date
 function setDate() {
   // Grab the span tag with id of current date
-  dateDiv = document.getElementById("currentDate");
+  const dateDiv = document.getElementById("currentDate");
 
   // Set the inner text to be new date value
   dateDiv.innerText = new Date();

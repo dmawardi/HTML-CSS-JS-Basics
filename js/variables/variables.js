@@ -25,7 +25,7 @@ const pokemon = {
   },
 };
 
-// Lists
+// Arrays/Lists
 // lists are able to hold lists of the above variables.
 const listOfWords = ["grandma", "grandpa", "father", "mother"];
 // Extra: sort is able to sort by alphabetical order
@@ -34,6 +34,7 @@ listOfWords.sort();
 listOfWords.push("Cheese");
 // More examples
 const listOfNumbers = [2, 4, 6, 8, 10];
+
 const listOfObjects = [
   {
     name: "squirtle",
@@ -61,7 +62,7 @@ const appendDiv = document.getElementById("append");
 // Create P element from scratch
 const p = document.createElement("p");
 // Customize p element
-p.innerHTML = "Your Pokemon is: " + listOfObjects[0].name;
+p.innerHTML = "Your Pokemon is: " + listOfObjects[2].name;
 
 // Append
 appendDiv.append(p);
@@ -79,5 +80,7 @@ function appleMaker() {
   console.log(tomato);
 }
 
+console.log("Masih berfungsi disini");
 // Access function local variable
 console.log(apple);
+appleMaker();
