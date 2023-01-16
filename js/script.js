@@ -3,13 +3,14 @@
 
 // Javascript method of adding a click event to a button
 // grab by ID
-handlerButton = document.getElementById("eventHandlerButton");
+let handlerButton = document.getElementById("eventHandlerButton");
 // add event listener
-handlerButton.addEventListener("click", () => changeCSS(handlerButton));
+// handlerButton.addEventListener("click", () => changeCSS(handlerButton));
+handlerButton.onclick = changeCSS;
 
 // Takes element and changes style attribute
-function changeCSS(element) {
-  element.setAttribute("style", "background-color: blue; color: white;");
+function changeCSS() {
+  this.setAttribute("style", "background-color: blue; color: white;");
 }
 
 // Takes element that is clicked as argument and logs its data-button attribute
